@@ -12,27 +12,6 @@ TABELAS
 
 - - - - - - 
 
-- TipoUsuario
--- IdTipoUsuario INT
--- Administrador INT
--- Medico INT
--- Paciente INT
-
-- - - - - 
-- TipoEspecialidade
--- IdTipoEspecialidade  INT
--- NomeEspecialidade    VARCHAR
-
-- - - - -
-
-- EspecialidadeMedico
--- IdEspecialidadeMedico  INT
--- IdTipoEspecialidade    INT
--- IdMedico INT
-
-
-- - - - - - 
-
 
 - Clinicas
 -- IdClinica INT
@@ -43,35 +22,21 @@ TABELAS
 
 - - - - - - 
 
-
-- Medicos
--- IdMedico INT
--- CRM VARCHAR
--- IdUsuario INT
--- IdEspecialidade INT
--- IdClinica INT
+- TipoEspecialidade
+-- IdTipoEspecialidade  INT
+-- NomeEspecialidade    VARCHAR
 
 
+- - - - - 
 
-- - - - - - 
-
-
-- Paciente
--- IdProntuario INT
--- IdUsuario INT
--- - IdPlanoSaude INT
-
-
-- - - - - - 
+- TipoUsuario
+-- IdTipoUsuario INT
+-- Administrador INT
+-- Medico INT
+-- Paciente INT
 
 
-- PlanoSaude
-- IdPlanoSaude INT
-- NomePlano
-
-
-- - - - - - 
-
+- - - - -
 
 
 - Usuarios
@@ -90,6 +55,48 @@ TABELAS
 - - - - - - 
 
 
+
+- Medicos
+-- IdMedico INT
+-- CRM VARCHAR
+-- IdUsuario INT
+-- IdEspecialidade INT
+-- IdClinica INT
+
+
+
+- - - - - - 
+
+
+
+- EspecialidadeMedico
+-- IdEspecialidadeMedico  INT
+-- IdTipoEspecialidade    INT
+-- IdMedico INT
+
+
+- - - - - - 
+
+
+
+- PlanoSaude
+- IdPlanoSaude INT
+- NomePlano
+
+
+- - - - - - 
+
+
+
+- Paciente
+-- IdProntuario INT
+-- IdUsuario INT
+-- IdPlanoSaude INT
+
+
+- - - - - - 
+
+
 - Consultas
 -- IdConsulta INT
 -- IdProntuario INT
@@ -100,8 +107,3 @@ TABELAS
 -- ValorConsulta DOUBLE
 
 - - - - - - 
-
-- EspecialidadeMedico
--- IdEspecialidadeMedico
--- IdMedico
--- IdTipoEpecialidade
