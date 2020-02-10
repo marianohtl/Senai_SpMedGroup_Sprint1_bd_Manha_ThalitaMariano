@@ -1,0 +1,107 @@
+Nome do Banco:
+SpMedGroupM
+
+
+
+- - - - - - 
+
+
+
+TABELAS
+
+
+- - - - - - 
+
+- TipoUsuario
+-- IdTipoUsuario INT
+-- Administrador INT
+-- Medico INT
+-- Paciente INT
+
+- - - - - 
+- TipoEspecialidade
+-- IdTipoEspecialidade  INT
+-- NomeEspecialidade    VARCHAR
+
+- - - - -
+
+- EspecialidadeMedico
+-- IdEspecialidadeMedico  INT
+-- IdTipoEspecialidade    INT
+-- IdMedico INT
+
+
+- - - - - - 
+
+
+- Clinicas
+-- IdClinica INT
+-- CNPJ VARCHAR
+-- RazaoSocial VARCHAR
+-- Endereco VARCHAR
+
+
+- - - - - - 
+
+
+- Medicos
+-- IdMedico INT
+-- CRM VARCHAR
+-- IdUsuario INT
+-- IdEspecialidade INT
+-- IdClinica INT
+
+
+
+- - - - - - 
+
+
+- Paciente
+-- IdProntuario INT
+-- IdUsuario INT
+-- - IdPlanoSaude INT
+
+
+- - - - - - 
+
+
+- PlanoSaude
+- IdPlanoSaude INT
+- NomePlano
+
+
+- - - - - - 
+
+
+
+- Usuarios
+-- IdUsuario INT
+-- IdTipoUsuario
+-- NomeUsuario VARCHAR
+-- Email VARCHAR
+-- Data_Nascimento DateTime2	
+-- Telefone VARCHAR
+-- Celular VARCHAR	
+-- RG VARCHAR
+-- Cpf VARCHAR
+-- Endereco VARCHAR
+
+
+- - - - - - 
+
+
+- Consultas
+-- IdConsulta INT
+-- IdProntuario INT
+-- IdMedico INT
+-- Data_Consulta DateTime2
+-- Situação VARCHAR
+-- PlanoSaude BIT
+-- ValorConsulta DOUBLE
+
+- - - - - - 
+
+- EspecialidadeMedico
+-- IdEspecialidadeMedico
+-- IdMedico
+-- IdTipoEpecialidade
