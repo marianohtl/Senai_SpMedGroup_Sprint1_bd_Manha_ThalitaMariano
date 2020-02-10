@@ -5,7 +5,7 @@ Projeto de avaliação do técnico em desenvolvimento de sistemas Senai.
 
 BRANCHES 
 
-- DOCUMENTAÇÃO
+- Documentação
 
 - Banco_de_Dados
 
