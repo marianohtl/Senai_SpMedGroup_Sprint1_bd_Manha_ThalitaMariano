@@ -13,57 +13,62 @@ TABELAS
 - - - - - - 
 
 
-- Clinicas
--- IdClinica INT
--- CNPJ VARCHAR
--- RazaoSocial VARCHAR
--- Endereco VARCHAR
+- PlanoSaude
+- IdPlanoSaude INT
+- NomePlano VARCHAR
 
 
 - - - - - - 
+
+
+- Clinicas
+-- IdClinica INT
+-- CNPJ VARCHAR
+-- NomeFantasia VARCHAR
+-- RazaoSocial VARCHAR
+-- Endereco VARCHAR
+-- Telefone
+
+
+- - - - - - 
+
 
 - TipoEspecialidade
 -- IdTipoEspecialidade  INT
 -- NomeEspecialidade    VARCHAR
 
 
-- - - - - 
+- - - - - - - - - - - -
+
 
 - TipoUsuario
 -- IdTipoUsuario INT
--- Administrador INT
--- Medico INT
--- Paciente INT
+-- Tipo VARCHAR
 
 
-- - - - -
+- - - - - - - - - - - -
+
 
 
 - Usuarios
 -- IdUsuario INT
--- IdTipoUsuario
+-- IdTipoUsuario INT
 -- NomeUsuario VARCHAR
 -- Email VARCHAR
--- Data_Nascimento DateTime2	
+-- Data_Nascimento Date	
 -- Telefone VARCHAR
 -- Celular VARCHAR	
 -- RG VARCHAR
 -- Cpf VARCHAR
 -- Endereco VARCHAR
 
-
-- - - - - - 
-
-
+- - - - 
 
 - Medicos
 -- IdMedico INT
--- CRM VARCHAR
 -- IdUsuario INT
--- IdEspecialidade INT
 -- IdClinica INT
-
-
+-- CRM VARCHAR
 
 - - - - - - 
 
@@ -75,34 +80,26 @@ TABELAS
 -- IdMedico INT
 
 
-- - - - - - 
+
+- - - - - - - - - - - -
 
 
 
-- PlanoSaude
-- IdPlanoSaude INT
-- NomePlano
-
-
-- - - - - - 
-
-
-
-- Paciente
--- IdProntuario INT
+- FichaPaciente
+-- IdFichaPaciente INT
 -- IdUsuario INT
 -- IdPlanoSaude INT
 
 
-- - - - - - 
+- - - - - - - - - - - -
 
 
 - Consultas
 -- IdConsulta INT
--- IdProntuario INT
+-- IdFichaPaciente INT
 -- IdMedico INT
 -- Data_Consulta DateTime2
--- Situação VARCHAR
+-- Situacao VARCHAR
 -- PlanoSaude BIT
 -- ValorConsulta DOUBLE
 
