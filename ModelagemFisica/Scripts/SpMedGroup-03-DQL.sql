@@ -1,5 +1,7 @@
 USE SpMedGroupM;
 
+SELECT * FROM PlanoSaude
+
 SELECT * FROM FichaPaciente
 SELECT * FROM Consultas
 SELECT * FROM EspecialidadeMedico
@@ -8,4 +10,3 @@ SELECT * FROM Usuarios
 SELECT * FROM TipoUsuario
 SELECT * FROM TipoEspecialidade
 SELECT * FROM Clinicas
-SELECT * FROM PlanoSaude

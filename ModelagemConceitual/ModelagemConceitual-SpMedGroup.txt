@@ -12,6 +12,60 @@ TABELAS
 
 - - - - - - 
 
+-Ceps
+--IdCep INT
+--Cep VARCHAR
+
+- - - - - - 
+
+
+
+-Estado
+-- IdEstado INT
+-- Estado VARCHAR
+-- Capital VARCHAR
+-- Sigla VARCHAR
+
+
+
+- - - - - - 
+
+- Cidades
+-- IdCidade  INT
+-- IdEstado INT
+Cidade VARCHAR
+
+- - - - - -
+
+-Bairros
+--IdBairro  INT
+Bairro VARCHAR
+
+- - - - - - 
+
+
+
+Enderecos
+- IdEndereco INT
+--IdCidade INT
+--IdCep INT
+--IdBairro INT
+Logradouro VARCHAR
+Numero VARCHAR
+Complemento VARCHAR
+
+
+
+- - - - - - 
+
+
+-Generos
+--IdGenero INT
+-- Genero varchar(200)
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+- - - - - - 
+
+
 
 - PlanoSaude
 - IdPlanoSaude INT
@@ -21,13 +75,22 @@ TABELAS
 - - - - - - 
 
 
+- Situcoes
+- IdSitucao INT
+- Situcao VARCHAR
+
+
+- - - - - - 
+
 - Clinicas
 -- IdClinica INT
+- IdEndereco INT <<<<<<<<<<
+-- HorarioAbertura Time <<<<<<<<<<
+-- HorarioFechamento Time <<<<<<<<<<
 -- CNPJ VARCHAR
 -- NomeFantasia VARCHAR
 -- RazaoSocial VARCHAR
--- Endereco VARCHAR
--- Telefone
+-- Telefone VARCHAR
 
 
 - - - - - - 
@@ -53,14 +116,17 @@ TABELAS
 - Usuarios
 -- IdUsuario INT
 -- IdTipoUsuario INT
+-- IdGenero INT  <<<<<<<<<<
+-- IdEndereco INT  <<<<<<<<<<
 -- NomeUsuario VARCHAR
 -- Email VARCHAR
+-- Senha VARCHAR <<<<<<<
 -- Data_Nascimento Date	
 -- Telefone VARCHAR
 -- Celular VARCHAR	
 -- RG VARCHAR
 -- Cpf VARCHAR
--- Endereco VARCHAR
+
 
 - - - - 
 
@@ -80,27 +146,19 @@ TABELAS
 -- IdMedico INT
 
 
-
-- - - - - - - - - - - -
-
-
-
-- FichaPaciente
--- IdFichaPaciente INT
--- IdUsuario INT
--- IdPlanoSaude INT
-
-
 - - - - - - - - - - - -
 
 
 - Consultas
 -- IdConsulta INT
--- IdFichaPaciente INT
+-- IdUsuario INT <<<<<<<<<
+-- IdPlanoSaude INT <<<<<<<<<<<
+-- IdSituacao <<<<<<<<<<<<
 -- IdMedico INT
 -- Data_Consulta DateTime2
 -- Situacao VARCHAR
--- PlanoSaude BIT
--- ValorConsulta DOUBLE
+-- ValorConsulta DECIMAL
 
 - - - - - - 
+
+--
