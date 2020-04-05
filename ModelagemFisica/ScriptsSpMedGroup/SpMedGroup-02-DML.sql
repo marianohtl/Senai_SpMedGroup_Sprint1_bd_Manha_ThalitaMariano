@@ -114,3 +114,12 @@ VALUES ('20/01/2020 15:00',00.00,5,1,1,1),
 	   ('20/01/2020 15:00',10.00,8,5,2,3),
 	   ('20/01/2020 15:00',1100.00,6,3,1,3);
 GO
+
+UPDATE Consultas  
+SET Descricao = ('Cheesy feet cheese and biscuits mascarpone. 
+Pecorino bavarian bergkase cheeseburger emmental danish fontina melted 
+cheese cheddar goat.Cheesy feet cheese and biscuits mascarpone. 
+Pecorino bavarian bergkase cheeseburger bergkase cheeseburger')
+WHERE IdConsulta = 1
+
+GO

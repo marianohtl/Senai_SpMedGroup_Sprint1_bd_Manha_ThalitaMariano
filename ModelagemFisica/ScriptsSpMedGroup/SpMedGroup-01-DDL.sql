@@ -104,7 +104,7 @@ GO
 CREATE TABLE Usuarios(
 IdUsuario INT PRIMARY KEY IDENTITY,
 NomeUsuario VARCHAR(255) NOT NULL,
-Email VARCHAR(100) NOT NULL,
+Email VARCHAR(100) NOT NULL,	
 Senha VARCHAR(255) NOT NULL,
 DataNascimento	Date NOT NULL,
 Telefone VARCHAR(16) NOT NULL,
@@ -138,6 +138,7 @@ CREATE TABLE Consultas(
 IdConsulta INT PRIMARY KEY IDENTITY,
 DataConsulta DateTime2 NOT NULL, 	
 ValorConsulta DECIMAL,
+Descricao VARCHAR(255),
 IdUsuario INT FOREIGN KEY REFERENCES Usuarios(IdUsuario) NOT NULL,
 IdPlanoSaude INT FOREIGN KEY REFERENCES PlanoSaude(IdPlanoSaude) NOT NULL,
 IdSituacao INT FOREIGN KEY REFERENCES Situacoes(IdSituacao) NOT NULL,
