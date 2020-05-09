@@ -1,0 +1,16 @@
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\SpMedGroup.deps.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\SpMedGroup.runtimeconfig.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\SpMedGroup.runtimeconfig.dev.json
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\SpMedGroup.dll
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\bin\Debug\netcoreapp2.1\SpMedGroup.pdb
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.csprojAssemblyReference.cache
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.RazorAssemblyInfo.cache
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.RazorAssemblyInfo.cs
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.AssemblyInfoInputs.cache
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.AssemblyInfo.cs
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.RazorTargetAssemblyInfo.cache
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.dll
+C:\Users\ThalitaMariano\Documents\Wp-Senai\SpMedGroup\SpMedGroup\obj\Debug\netcoreapp2.1\SpMedGroup.pdb
