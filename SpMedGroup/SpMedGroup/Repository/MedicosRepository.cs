@@ -1,13 +1,13 @@
 ﻿using SpMedGroup.Domains;
+using SpMedGroup.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SpMedGroup.Interfaces
+namespace SpMedGroup.Repository
 {
-    interface ITipoUsuarioRepository
+    public class MedicosRepository : IMedicosRepository
     {
-
     }
 }
