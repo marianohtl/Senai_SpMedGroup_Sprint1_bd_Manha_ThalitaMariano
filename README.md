@@ -8,7 +8,6 @@ Projeto Desenvolvido com CSharp .Net Core 2_1
 Entity Framework
 Swagger
 JWT
-
-
+Database First SqlServer com Scaffold
 
 

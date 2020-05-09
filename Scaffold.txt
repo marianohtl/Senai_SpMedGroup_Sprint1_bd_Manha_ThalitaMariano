@@ -1,0 +1,32 @@
+    
+Scaffold-DbContext [String de conexão][Tipo do banco de dados] -OutputDir [Nome da pasta Domains] -ContextDir [Nome da pasta Contexts] -Context [Nome do arquivo Context]
+
+String de conexão : A string que fará conexão com o banco de dados. O Unico comando que deve ser colocado entre aspas (") Não é necessario colocar duas barras invertidas(\) no endereço do banco de dados
+Tipo do banco de dados : Qual banco de dados será usado , Deve ser colocado a bibilioteca de referencia , Exemplo : SQLServer = Microsoft.EntityFrameworkCore.SqlServer. Então , caso queira usar outro banco de daos , você terá que importar a biblioteca que de suporte a ela.
+Pasta Domains : Seria o nome onde ficariam todos os modelos , classes com os dados e variaveis já baseadas em cada tabela
+Pasta Contex : Ficara os arquivos com as regras , tabelas e valores do banco de dados
+Arquivo Context : O Arquivo onde
+​[quarta-feira 18:54] Franklin Bitencourt
+    
+Scaffold-DbContext [String de conexão][Tipo do banco de dados] -OutputDir [Nome da pasta Domains] -ContextDir [Nome da pasta Contexts] -Context [Nome do arquivo Context]
+​    
+
+- - - - -
+
+
+Scaffold-DbContext "[String de conexão]" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context ApiContext
+
+
+- - - - -
+
+
+Scaffold-DbContext "[String de conexão]" Microsoft.EntityFrameworkCore.SqlServer -ContextDir Contexts
+
+
+- - - - -
+
+exemplo de scaffold:
+
+Scaffold-DbContext "Server=localhost\SQLEXPRESS; Database=SpMedGroupM;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Domains -ContextDir Contexts -Context ApiContext
+
+- - - - - 

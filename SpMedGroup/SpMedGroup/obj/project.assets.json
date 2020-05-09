@@ -12598,11 +12598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\SpMedGroup\\SpMedGroup\\SpMedGroup.csproj",
+      "projectUniqueName": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\Senai_SpMedGroup_ThalitaMariano\\SpMedGroup\\SpMedGroup\\SpMedGroup.csproj",
       "projectName": "SpMedGroup",
-      "projectPath": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\SpMedGroup\\SpMedGroup\\SpMedGroup.csproj",
+      "projectPath": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\Senai_SpMedGroup_ThalitaMariano\\SpMedGroup\\SpMedGroup\\SpMedGroup.csproj",
       "packagesPath": "C:\\Users\\ThalitaMariano\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\SpMedGroup\\SpMedGroup\\obj\\",
+      "outputPath": "C:\\Users\\ThalitaMariano\\Documents\\Wp-Senai\\Senai_SpMedGroup_ThalitaMariano\\SpMedGroup\\SpMedGroup\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
