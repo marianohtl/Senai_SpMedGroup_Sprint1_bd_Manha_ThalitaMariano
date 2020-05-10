@@ -10,6 +10,17 @@ namespace SpMedGroup.Repository
     public class TipoUsuarioRepository : ITipoUsuarioRepository
     {
 
+        ApiContext context = new ApiContext();
+
+
+        /// <summary>
+        /// Lista os tipos de usuário do sistema;
+        /// </summary>
+        /// <returns> Uma lista de tipos de usuários </returns>
+        public List<TipoUsuario> ListarTiposUsuarios()
+        {
+            return context.TipoUsuario.ToList();
+        }
 
 
 

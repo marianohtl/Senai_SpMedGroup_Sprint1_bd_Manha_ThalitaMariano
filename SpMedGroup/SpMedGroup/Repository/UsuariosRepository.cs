@@ -9,5 +9,15 @@ namespace SpMedGroup.Repository
 {
     public class UsuariosRepository : IUsuariosRepository
     {
+        ApiContext context = new ApiContext();
+
+        /// <summary>
+        /// lista os usuários
+        /// </summary>
+        /// <returns>uma lista com os usuários cadastrados</returns
+        public List<Usuarios> ListarUsuarios()
+        {
+            return context.Usuarios.ToList();
+        }
     }
 }

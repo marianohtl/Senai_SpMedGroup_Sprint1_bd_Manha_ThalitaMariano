@@ -9,5 +9,15 @@ namespace SpMedGroup.Repository
 {
     public class EstadosRepository : IEstadosRepository
     {
+        ApiContext context = new ApiContext();
+
+        /// <summary>
+        /// Lista os estados
+        /// </summary>
+        /// <returns>uma lista dos estados cadastrados</returns>
+        public List<Estados> BuscarEstados()
+        {
+            return context.Estados.ToList();
+        }
     }
 }

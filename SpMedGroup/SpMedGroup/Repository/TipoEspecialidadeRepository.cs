@@ -9,5 +9,15 @@ namespace SpMedGroup.Repository
 {
     public class TipoEspecialidadeRepository : ITipoEspecialidadeRepository
     {
+        ApiContext context = new ApiContext();
+
+        /// <summary>
+        /// lista as especialidades que o médico pode ter
+        /// </summary>
+        /// <returns>uma lista com as especialidades cadastradas</returns
+        public List<TipoEspecialidade> ListarTipoEspecialidade()
+        {
+            return context.TipoEspecialidade.ToList();
+        }
     }
 }

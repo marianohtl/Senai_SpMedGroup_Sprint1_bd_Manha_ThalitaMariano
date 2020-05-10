@@ -9,5 +9,15 @@ namespace SpMedGroup.Repository
 {
     public class GenerosRepository : IGenerosRepository
     {
+        ApiContext context = new ApiContext();
+
+        /// <summary>
+        /// lista os gêneros
+        /// </summary>
+        /// <returns>retorna uma lista de gêneros</returns>
+        public List<Generos> ListarGeneros()
+        {
+            return context.Generos.ToList();
+        }
     }
 }

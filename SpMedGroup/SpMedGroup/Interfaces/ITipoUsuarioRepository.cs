@@ -8,6 +8,7 @@ namespace SpMedGroup.Interfaces
 {
     interface ITipoUsuarioRepository
     {
+        List<TipoUsuario> ListarTiposUsuarios();
 
     }
 }

@@ -9,5 +9,16 @@ namespace SpMedGroup.Repository
 {
     public class MedicosRepository : IMedicosRepository
     {
+        ApiContext context = new ApiContext();
+
+
+        /// <summary>
+        /// Lista os médicos
+        /// </summary>
+        /// <returns>Retorna uma lista de médicos</returns>
+        public List<Medicos> ListarMedicos()
+        {
+            return context.Medicos.ToList();
+        }
     }
 }
