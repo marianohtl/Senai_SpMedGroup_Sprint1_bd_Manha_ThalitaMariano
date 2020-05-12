@@ -1,4 +1,5 @@
-﻿using SpMedGroup.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using SpMedGroup.Domains;
 using SpMedGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,8 @@ namespace SpMedGroup.Repository
         /// <returns>uma lista de cidades cadastrados no banco de dados</returns>
         public List<Cidades> ListarCidades()
         {
-            return context.Cidades.ToList();
+             List<Cidades> cidades = new List<Cidades>(context.Cidades.Include(c => c.IdEstadoNavigation).ToList());
+             return cidades;
         }
     }
 

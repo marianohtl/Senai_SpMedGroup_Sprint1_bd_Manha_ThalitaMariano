@@ -61,13 +61,13 @@ namespace SpMedGroup.Domains
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdBairroNavigation)
-                    .WithMany(p => p.Ceps)
+                    .WithMany()
                     .HasForeignKey(d => d.IdBairro)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Ceps__IdBairro__4316F928");
 
                 entity.HasOne(d => d.IdCidadeNavigation)
-                    .WithMany(p => p.Ceps)
+                    .WithMany()
                     .HasForeignKey(d => d.IdCidade)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Ceps__IdCidade__440B1D61");
@@ -83,7 +83,7 @@ namespace SpMedGroup.Domains
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdEstadoNavigation)
-                    .WithMany(p => p.Cidades)
+                    .WithMany()
                     .HasForeignKey(d => d.IdEstado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Cidades__IdEstad__3E52440B");
@@ -115,7 +115,7 @@ namespace SpMedGroup.Domains
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdEnderecoNavigation)
-                    .WithMany(p => p.Clinicas)
+                    .WithMany()
                     .HasForeignKey(d => d.IdEndereco)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Clinicas__IdEnde__49C3F6B7");
@@ -138,7 +138,7 @@ namespace SpMedGroup.Domains
                     .HasConstraintName("FK__Consultas__IdMed__5FB337D6");
 
                 entity.HasOne(d => d.IdPlanoSaudeNavigation)
-                    .WithMany(p => p.Consultas)
+                    .WithMany()
                     .HasForeignKey(d => d.IdPlanoSaude)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Consultas__IdPla__5DCAEF64");
@@ -150,7 +150,7 @@ namespace SpMedGroup.Domains
                     .HasConstraintName("FK__Consultas__IdSit__5EBF139D");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.Consultas)
+                    .WithMany()
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Consultas__IdUsu__5CD6CB2B");
@@ -175,7 +175,7 @@ namespace SpMedGroup.Domains
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdCepNavigation)
-                    .WithMany(p => p.Enderecos)
+                    .WithMany()
                     .HasForeignKey(d => d.IdCep)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Enderecos__IdCep__46E78A0C");
@@ -239,13 +239,13 @@ namespace SpMedGroup.Domains
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdClinicaNavigation)
-                    .WithMany(p => p.Medicos)
+                    .WithMany()
                     .HasForeignKey(d => d.IdClinica)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Medicos__IdClini__5629CD9C");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.Medicos)
+                    .WithMany()
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Medicos__IdUsuar__5535A963");
@@ -332,20 +332,21 @@ namespace SpMedGroup.Domains
                     .HasMaxLength(16)
                     .IsUnicode(false);
 
+                //p => p.Usuarios
                 entity.HasOne(d => d.IdEnderecoNavigation)
-                    .WithMany(p => p.Usuarios)
+                    .WithMany()
                     .HasForeignKey(d => d.IdEndereco)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Usuarios__IdEnde__52593CB8");
 
                 entity.HasOne(d => d.IdGeneroNavigation)
-                    .WithMany(p => p.Usuarios)
+                    .WithMany()
                     .HasForeignKey(d => d.IdGenero)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Usuarios__IdGene__5070F446");
 
                 entity.HasOne(d => d.IdTipoUsuarioNavigation)
-                    .WithMany(p => p.Usuarios)
+                    .WithMany()
                     .HasForeignKey(d => d.IdTipoUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Usuarios__IdTipo__5165187F");

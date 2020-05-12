@@ -5,10 +5,6 @@ namespace SpMedGroup.Domains
 {
     public partial class Ceps
     {
-        public Ceps()
-        {
-            Enderecos = new HashSet<Enderecos>();
-        }
 
         public int IdCep { get; set; }
         public string Cep { get; set; }
@@ -17,6 +13,6 @@ namespace SpMedGroup.Domains
 
         public Bairros IdBairroNavigation { get; set; }
         public Cidades IdCidadeNavigation { get; set; }
-        public ICollection<Enderecos> Enderecos { get; set; }
+   
     }
 }

@@ -1,4 +1,5 @@
-﻿using SpMedGroup.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using SpMedGroup.Domains;
 using SpMedGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,11 @@ namespace SpMedGroup.Repository
         /// <returns>uma lista com os usuários cadastrados</returns
         public List<Usuarios> ListarUsuarios()
         {
-            return context.Usuarios.ToList();
+
+            List<Usuarios> user = new List<Usuarios>();
+            var dados = context.Usuarios.Include(t => t.IdTipoUsuarioNavigation).Include(g => g.IdGeneroNavigation).Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation);
+            user = dados.Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
+            return user;
         }
     }
 }

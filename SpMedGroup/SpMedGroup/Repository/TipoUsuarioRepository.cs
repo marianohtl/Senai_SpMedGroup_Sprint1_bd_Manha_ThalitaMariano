@@ -1,4 +1,5 @@
-﻿using SpMedGroup.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using SpMedGroup.Domains;
 using SpMedGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,6 @@ namespace SpMedGroup.Repository
         {
             return context.TipoUsuario.ToList();
         }
-
 
 
     }

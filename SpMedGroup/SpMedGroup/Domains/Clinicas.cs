@@ -5,10 +5,7 @@ namespace SpMedGroup.Domains
 {
     public partial class Clinicas
     {
-        public Clinicas()
-        {
-            Medicos = new HashSet<Medicos>();
-        }
+       
 
         public int IdClinica { get; set; }
         public string Cnpj { get; set; }
@@ -20,6 +17,5 @@ namespace SpMedGroup.Domains
         public int IdEndereco { get; set; }
 
         public Enderecos IdEnderecoNavigation { get; set; }
-        public ICollection<Medicos> Medicos { get; set; }
     }
 }

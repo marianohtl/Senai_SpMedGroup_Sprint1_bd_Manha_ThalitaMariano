@@ -1,4 +1,5 @@
-﻿using SpMedGroup.Domains;
+﻿using Microsoft.EntityFrameworkCore;
+using SpMedGroup.Domains;
 using SpMedGroup.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,10 @@ namespace SpMedGroup.Repository
         /// <returns>uma lista de endereços cadastrados no banco</returns>
         public List<Enderecos> BuscarEnderecos()
         {
-            return context.Enderecos.ToList();
+            List<Enderecos> enderecos = new List<Enderecos>();
+            var dados = context.Enderecos.Include(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation);
+            enderecos = dados.Include(c => c.IdCepNavigation).ThenInclude(c => c.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
+            return enderecos;
         }
 
     }
