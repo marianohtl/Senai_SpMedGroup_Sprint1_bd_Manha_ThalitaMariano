@@ -18,9 +18,8 @@ namespace SpMedGroup.Repository
         /// <returns>uma lista de endereços cadastrados no banco</returns>
         public List<Enderecos> BuscarEnderecos()
         {
-            List<Enderecos> enderecos = new List<Enderecos>();
-            var dados = context.Enderecos.Include(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation);
-            enderecos = dados.Include(c => c.IdCepNavigation).ThenInclude(c => c.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
+            var enderecos = context.Enderecos.Include(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation)
+            .Include(c => c.IdCepNavigation).ThenInclude(c => c.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
             return enderecos;
         }
 

@@ -10,5 +10,7 @@ namespace SpMedGroup.Interfaces
     {
         List<Clinicas> BuscarClinicas();
 
+        Clinicas BuscarClinica(int clinicaId);
+
     }
 }

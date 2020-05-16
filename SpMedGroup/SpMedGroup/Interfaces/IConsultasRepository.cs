@@ -10,5 +10,7 @@ namespace SpMedGroup.Interfaces
     {
 
         List<Consultas> BuscarConsultas();
+
+        Consultas BuscarConsulta(int consultaId);
     }
 }

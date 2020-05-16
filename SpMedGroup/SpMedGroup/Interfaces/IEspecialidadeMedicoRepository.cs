@@ -8,6 +8,8 @@ namespace SpMedGroup.Interfaces
 {
     interface IEspecialidadeMedicoRepository
     {
-        List<EspecialidadeMedico> BuscarEspecialidadeMedico();
+        List<EspecialidadeMedico> BuscarTodasEspecialidadeMedico();
+
+        List<EspecialidadeMedico> BuscarEspecialidadeMedico(int medicoId);
     }
 }

@@ -5,11 +5,6 @@ namespace SpMedGroup.Domains
 {
     public partial class Medicos
     {
-        public Medicos()
-        {
-            Consultas = new HashSet<Consultas>();
-            EspecialidadeMedico = new HashSet<EspecialidadeMedico>();
-        }
 
         public int IdMedico { get; set; }
         public string Crm { get; set; }
@@ -18,7 +13,6 @@ namespace SpMedGroup.Domains
 
         public Clinicas IdClinicaNavigation { get; set; }
         public Usuarios IdUsuarioNavigation { get; set; }
-        public ICollection<Consultas> Consultas { get; set; }
-        public ICollection<EspecialidadeMedico> EspecialidadeMedico { get; set; }
+
     }
 }

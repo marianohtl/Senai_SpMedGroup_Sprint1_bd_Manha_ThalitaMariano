@@ -132,7 +132,7 @@ namespace SpMedGroup.Domains
                 entity.Property(e => e.ValorConsulta).HasColumnType("decimal(18, 0)");
 
                 entity.HasOne(d => d.IdMedicoNavigation)
-                    .WithMany(p => p.Consultas)
+                    .WithMany()
                     .HasForeignKey(d => d.IdMedico)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Consultas__IdMed__5FB337D6");
@@ -144,7 +144,7 @@ namespace SpMedGroup.Domains
                     .HasConstraintName("FK__Consultas__IdPla__5DCAEF64");
 
                 entity.HasOne(d => d.IdSituacaoNavigation)
-                    .WithMany(p => p.Consultas)
+                    .WithMany()
                     .HasForeignKey(d => d.IdSituacao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Consultas__IdSit__5EBF139D");
@@ -186,7 +186,7 @@ namespace SpMedGroup.Domains
                 entity.HasKey(e => e.IdEspecialidadeMedico);
 
                 entity.HasOne(d => d.IdMedicoNavigation)
-                    .WithMany(p => p.EspecialidadeMedico)
+                    .WithMany()
                     .HasForeignKey(d => d.IdMedico)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK__Especiali__IdMed__59FA5E80");

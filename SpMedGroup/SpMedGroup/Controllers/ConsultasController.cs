@@ -30,11 +30,17 @@ namespace SpMedGroup.Controllers
         /// <returns>uma lista de consultas cadastrada</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             return Ok(_consultaRepository.BuscarConsultas());
         }
-
+        
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpGet("{consultaId}")]
+        public IActionResult GetConsulta(int consultaId)
+        {
+            return Ok(_consultaRepository.BuscarConsulta(consultaId));
+        }
 
     }
 }

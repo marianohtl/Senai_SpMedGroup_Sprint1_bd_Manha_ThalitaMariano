@@ -18,19 +18,26 @@ namespace SpMedGroup.Controllers
     {
         private IClinicasRepository _clinicaRepository;
 
-        public ClinicasController() {
+        public ClinicasController()
+        {
             _clinicaRepository = new ClinicasRepository();
         }
-        
+
         /// <summary>
         /// Lista todas as clínicas
         /// </summary>
         /// <returns>Retorna uma lista de clínicas cadastradas</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             return Ok(_clinicaRepository.BuscarClinicas());
+        }
+        [HttpGet("{clinicaId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetClinica(int clinicaId)
+        {
+            return Ok(_clinicaRepository.BuscarClinica(clinicaId));
         }
 
     }

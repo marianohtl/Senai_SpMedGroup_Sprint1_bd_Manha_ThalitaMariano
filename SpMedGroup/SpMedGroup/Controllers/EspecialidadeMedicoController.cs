@@ -10,7 +10,7 @@ using SpMedGroup.Repository;
 namespace SpMedGroup.Controllers
 {
     [Produces("application/json")]
-    
+
     [Route("api/[controller]")]
 
     [ApiController]
@@ -30,9 +30,15 @@ namespace SpMedGroup.Controllers
         /// <returns>Uma lista de especialidades que os médicos podem ter</returns>
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
-            return Ok(_especialidadeMedicoRepository.BuscarEspecialidadeMedico());
+            return Ok(_especialidadeMedicoRepository.BuscarTodasEspecialidadeMedico());
+        }
+
+        [HttpGet("{medicoId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public IActionResult GetEspecialidade(int medicoId) {
+            return Ok(_especialidadeMedicoRepository.BuscarEspecialidadeMedico(medicoId));
         }
     }
 }

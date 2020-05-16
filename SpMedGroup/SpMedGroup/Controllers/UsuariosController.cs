@@ -31,9 +31,18 @@ namespace SpMedGroup.Controllers
 
         [HttpGet]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Index()
+        public IActionResult Get()
         {
             return Ok(_usuariosRepository.ListarUsuarios());
         }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpGet("{usuarioId}")]
+        public IActionResult GetUser(int usuarioId)
+        {
+            return Ok(_usuariosRepository.BuscarUsuario(usuarioId));
+        }
+
+
     }
 }

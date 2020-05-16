@@ -11,7 +11,6 @@ namespace SpMedGroup.Repository
     public class ClinicasRepository : IClinicasRepository
     {
         ApiContext context = new ApiContext();
-
         /// <summary>
         /// Lista as Clinicas
         /// </summary>
@@ -24,5 +23,12 @@ namespace SpMedGroup.Repository
             clinicas = dados.Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(cd => cd.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
             return clinicas;
         }
+
+        public Clinicas BuscarClinica(int clinicaId)
+        {
+            var clinicas = context.Clinicas.Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation).Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(cd => cd.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).FirstOrDefault(c => c.IdClinica == clinicaId);
+            return clinicas;
+        }
+
     }
 }

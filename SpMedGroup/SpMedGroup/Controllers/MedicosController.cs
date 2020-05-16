@@ -29,9 +29,17 @@ namespace SpMedGroup.Controllers
         /// <returns>Retorna uma lista de médicos</returns>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             return Ok(_medicosRepository.ListarMedicos());
         }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [HttpGet("{medicoId}")]
+        public IActionResult GetMedico(int medicoId)
+        {
+            return Ok(_medicosRepository.BuscarMedico(medicoId));
+        }
+
     }
 }

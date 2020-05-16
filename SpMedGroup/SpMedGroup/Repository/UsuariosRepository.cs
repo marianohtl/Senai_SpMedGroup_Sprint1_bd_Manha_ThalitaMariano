@@ -24,5 +24,11 @@ namespace SpMedGroup.Repository
             user = dados.Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).ToList();
             return user;
         }
+
+        public Usuarios BuscarUsuario(int usuarioId) {
+            var user = context.Usuarios.Include(t => t.IdTipoUsuarioNavigation).Include(g => g.IdGeneroNavigation).Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdBairroNavigation).Include(e => e.IdEnderecoNavigation).ThenInclude(c => c.IdCepNavigation).ThenInclude(b => b.IdCidadeNavigation).ThenInclude(e => e.IdEstadoNavigation).FirstOrDefault(u => u.IdUsuario == usuarioId);
+            return user;
+         }
+
     }
 }

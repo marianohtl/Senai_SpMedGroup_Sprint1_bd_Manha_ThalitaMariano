@@ -10,5 +10,7 @@ namespace SpMedGroup.Interfaces
     {
         List<Usuarios> ListarUsuarios();
 
+        Usuarios BuscarUsuario(int usuarioId);
+
     }
 }

@@ -9,5 +9,7 @@ namespace SpMedGroup.Interfaces
     interface IMedicosRepository
     {
         List<Medicos> ListarMedicos();
+
+        Medicos BuscarMedico(int medicoId);
     }
 }
